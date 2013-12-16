@@ -6,13 +6,12 @@ define([
 	'./create-select-status',
 	'./create-select-casetype',
 	'./create-select-date',
-	'./create-select-casemile',
-	'../../ga',
+	'./create-select-casemile'
 	'app/../../component/autoSave',
 	'../../loading',
 	'../../collection/selected-account',
 	'../../../component/autogrow-textarea'
-], function(Backbone, $, App, Tpl, SelectStatusView, SelectCaseTypeView, SelectStatusDate, SelectCaseMile, gaPlugin, localCache, Loading, SelectedAccounts) {
+], function(Backbone, $, App, Tpl, SelectStatusView, SelectCaseTypeView, SelectStatusDate, SelectCaseMile, localCache, Loading, SelectedAccounts) {
 	return Backbone.View.extend({
 		className: 'visitCreateContainer',
 		

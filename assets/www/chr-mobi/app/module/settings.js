@@ -1,10 +1,9 @@
 define([
 	'backbone',
 	'../layout',
-	'../model/quota-show',
-	'../ga',
+	'../model/quota-show'
 	'../view/setting/show'
-], function(Backbone, Layout, QuotaShow, gaPlugin, QuotaShowView) {
+], function(Backbone, Layout, QuotaShow, QuotaShowView) {
 	var Module = {}
 
 	Module.Router = Backbone.SubRoute.extend({
@@ -22,10 +21,6 @@ define([
 			var quotaShowView = new QuotaShowView({
 				model: quotaShow
 			})
-
-			gaPlugin.sendView(function(data) {
-				console.log(data)
-			}, null, '/settings')
 
 			quotaShow.fetch({
 				success: function() {

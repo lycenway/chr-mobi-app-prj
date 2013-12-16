@@ -3,9 +3,8 @@ define([
     '../layout',
     '../model/performance',
     '../view/index/performance',
-    '../view/index/histogram',
-    '../ga'
-], function(Backbone, Layout, Performance, PerformanceView, HistogramView, gaPlugin) {
+    '../view/index/histogram'
+], function(Backbone, Layout, Performance, PerformanceView, HistogramView) {
     var Module = {}
 
     Module.Router = Backbone.SubRoute.extend({
@@ -14,7 +13,7 @@ define([
         },
 
         show: function() {
-            var startTime = gaPlugin.start()
+            //var startTime = gaPlugin.start()
 
             App.router.setCurrentSwipeIndex(0)
 
@@ -34,9 +33,6 @@ define([
                 model: performance
             })
 
-            gaPlugin.sendView(function(data) {
-                console.log(data)
-            }, null, '/index')
             performance.fetch({
                 _cache: {
                     key: '/index'
@@ -60,12 +56,12 @@ define([
 
                     histogramView.render()
 
-                    gaPlugin.firstOpen('success')
-                    gaPlugin.end('/index', startTime, 'success')
+                    //gaPlugin.firstOpen('success')
+                    //gaPlugin.end('/index', startTime, 'success')
                 },
                 error: function() {
-                    gaPlugin.firstOpen('error')
-                    gaPlugin.end('/index', startTime, 'error')
+                    //gaPlugin.firstOpen('error')
+                    //gaPlugin.end('/index', startTime, 'error')
                     console.error('performance fetch error.')
                     alert('加载失败，请重试。')
                 }

@@ -4,12 +4,11 @@ define([
     'device',
     'iscroll',
     'fastclick',
-    'ga',
     '../component/update',
     '../component/connector',
     'subroute'
 ], function(
-    Backbone, $, device, iScroll, attachFastClick, gaPlusin, autoUpdate
+    Backbone, $, device, iScroll, attachFastClick, autoUpdate
 ) {
     require(['config-common','config-env'])
 
@@ -77,7 +76,6 @@ define([
                 })
 
                 self.proxyAnchor()
-                device.bind()
             })
         },
 

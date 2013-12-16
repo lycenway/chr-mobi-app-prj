@@ -3,9 +3,8 @@ define([
     'zepto',
     'app',
     '../../tpl-data-bind',
-    '../../../component/number',
-    '../../ga'
-], function(Backbone, $, App, Tpl, numUtil, gaPlugin) {
+    '../../../component/number'
+], function(Backbone, $, App, Tpl, numUtil) {
     return Backbone.View.extend({
         className: 'visit-add',
 

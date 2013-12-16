@@ -3,9 +3,8 @@ define([
 	'zepto',
 	'app',
 	'../../tpl-data-bind',
-	'../../../component/number',
-	'../../ga'
-], function(Backbone, $, App, Tpl, numUtil, gaPlugin) {
+	'../../../component/number'
+], function(Backbone, $, App, Tpl, numUtil) {
 	return Backbone.View.extend({
 		tagName: 'ul',
 
@@ -223,7 +222,7 @@ define([
 			$arrow.attr('data-status', status)
 			$arrow[0].style.webkitTransform = deg
 
-			gaPlugin.sendEvent(null, null, 'user', 'click', 'deal-online-detail-' + (status ? status : 'close'), 0)
+			//gaPlugin.sendEvent(null, null, 'user', 'click', 'deal-online-detail-' + (status ? status : 'close'), 0)
 
 			return false
 		}

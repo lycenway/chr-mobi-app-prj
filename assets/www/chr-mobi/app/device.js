@@ -3,10 +3,8 @@ define([
     'backbone',
     'model/user',
     'model/device',
-    'auther',
-    'ga',
     '../component/update'
-], function($, Backbone, User, Device, auther, gaPlugin, autoUpdate) {
+], function($, Backbone, User, Device, autoUpdate) {
     var backButtonTapCount = 0
 
     return {
@@ -35,8 +33,6 @@ define([
             var self = this
 
             document.addEventListener('deviceready', function() {
-                auther()
-                gaPlugin.onload()
                 self.bindBackbutton()
                 self.relpaceAlert()
                 autoUpdate.update()
@@ -47,7 +43,7 @@ define([
             setTimeout(function() {
                 (new User()).fetch({
                     success: function(data) {
-                        gaPlugin.initUserInfo(data)
+                        //gaPlugin.initUserInfo(data)
                         console.log('用户获取成功！')
                     },
                     error: function() {
@@ -59,34 +55,7 @@ define([
         },
 
         registUserDevice: function() {
-            //chao -debug
-            // setTimeout(function() {
-            //     window.plugins.pushNotification.getInfo(function(device) {
-            //         (new Device({
-            //             appId: device.appId,
-            //             token: device.token,
-            //             type: device.type
-            //         })).save(null, {
-            //             error: function() {
-            //                 gaPlugin.sendException(function(data) {
-            //                     console.log(data)
-            //                 }, function(data) {
-            //                     console.log(data)
-            //                 }, '设备注册失败！' + JSON.stringify(arguments), false)
-            //             },
-            //             success: function() {
-            //                 console.log('设备注册成功！')
-            //             },
-            //             background: true
-            //         })
-            //     }, function() {
-            //         gaPlugin.sendException(function(data) {
-            //             console.log(data)
-            //         }, function(data) {
-            //             console.log(data)
-            //         }, '设备注册失败！' + JSON.stringify(arguments), false)
-            //     })
-            // }, 20000)
+            //
         },
 
         bindBackbutton: function() {

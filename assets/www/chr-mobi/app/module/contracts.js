@@ -3,9 +3,8 @@ define([
     '../layout',
     '../collection/contract',
     '../view/contract/list',
-    '../view/common/blank',
-    '../ga'
-], function(Backbone, Layout, Contracts, ContractsView, BlankView, gaPlugin) {
+    '../view/common/blank'
+], function(Backbone, Layout, Contracts, ContractsView, BlankView) {
     var Module = {}
 
     Module.Router = Backbone.SubRoute.extend({
@@ -14,7 +13,7 @@ define([
         },
 
         list: function(type) {
-            gaPlugin.sendView(function(data) {
+            //gaPlugin.sendView(function(data) {
                 console.log(data)
             }, null, '/contracts/' + type)
 
@@ -65,10 +64,10 @@ define([
                     key: '/contracts/' + type,
                 },
                 success: function() {
-                    gaPlugin.end('/contracts/' + type, startTime, 'success')
+                    //gaPlugin.end('/contracts/' + type, startTime, 'success')
                 },
                 error: function() {
-                    gaPlugin.end('/contracts/' + type, startTime, 'error')
+                    //gaPlugin.end('/contracts/' + type, startTime, 'error')
                     alert('加载失败，请重试。')
                 }
             })

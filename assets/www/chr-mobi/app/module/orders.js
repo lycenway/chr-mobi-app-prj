@@ -3,9 +3,8 @@ define([
     '../layout',
     'collection/order',
     'view/order/list',
-    '../view/common/blank',
-    '../ga'
-], function(Backbone, Layout, Orders, OrdersView, BlankView, gaPlugin) {
+    '../view/common/blank'
+], function(Backbone, Layout, Orders, OrdersView, BlankView) {
     var Module = {}
 
     Module.Router = Backbone.SubRoute.extend({
@@ -14,11 +13,7 @@ define([
         },
 
         list: function(type) {
-            gaPlugin.sendView(function(data) {
-                console.log(data)
-            }, null, '/orders/' + type)
-
-            var startTime = gaPlugin.start()
+            //var startTime = gaPlugin.start()
 
             App.router.setCurrentSwipeIndex(2)
 
@@ -73,11 +68,11 @@ define([
                 },
 
                 success: function() {
-                    gaPlugin.end('/orders/' + type, startTime, 'success')
+                    //gaPlugin.end('/orders/' + type, startTime, 'success')
                 },
 
                 error: function() {
-                    gaPlugin.end('/orders/' + type, startTime, 'error')
+                    //gaPlugin.end('/orders/' + type, startTime, 'error')
                     alert('加载失败，请重试。')
                 }
             }, opt))

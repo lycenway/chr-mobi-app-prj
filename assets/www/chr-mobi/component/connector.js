@@ -1,9 +1,8 @@
 define([
 	'backbone',
 	'loading',
-	'../app/ga',
 	'../app/cache'
-], function(Backbone, Loading, gaPlugin, Cache) {
+], function(Backbone, Loading, Cache) {
 	var _BackboneSync = Backbone.sync
 
 	/**
@@ -14,14 +13,8 @@ define([
 	var processServer = function(options) {
 		//var server
 
-		/*if (options._server) {
+		if (options._server) {
 			server = options._server + (options._server.lastIndexOf('/') === options._server.length - 1 ? '' : '/')
-		} else if (ENV.forcetkClient) {
-			server = ENV.forcetkClient.instanceUrl + (ENV.restAPI || '/services/apexrest') + '/'
-		}*/
-
-		if (ENV.forcetkClient) {
-			server = ENV.forcetkClient.instanceUrl + (ENV.restAPI || '/services/apexrest') + '/'
 		}
 
 		if (ENV.mock) {
@@ -51,17 +44,7 @@ define([
 	 * @param  {Object} options backbone或用户自定义
 	 */
 	var processBeforeSend = function(options) {
-		// if (options._server) {
-		// 	if (ENV.forcetkClient) {
-		// 		options.beforeSend = function(xhr) {
-		// 			xhr.setRequestHeader('Authorization', ENV.forcetkClient.sessionId)
-		// 		}
-		// 	}
-
-		// 	return
-		// }
-
-		if (ENV.forcetkClient) {
+		/*if (ENV.forcetkClient) {
 			console.log('ENV.forcetkClient.authzHeader is ' + ENV.forcetkClient.authzHeader)
 			console.log('ENV.forcetkClient.sessionId is ' + ENV.forcetkClient.sessionId)
 
@@ -73,7 +56,7 @@ define([
 					xhr.setRequestHeader('X-User-Agent', ENV.forcetkClient.userAgentString)
 				}
 			}
-		}
+		}*/
 	}
 
 	/**
@@ -94,10 +77,10 @@ define([
 
 		var errorCbFn = function(xhr, errorType, error) {
 
-			gaPlugin.sendException(null, null, gaPlugin.getXhrErrorMessage(xhr, options.url, method), false)
+			//gaPlugin.sendException(null, null, gaPlugin.getXhrErrorMessage(xhr, options.url, method), false)
 
 			if (options.startTime) {
-				gaPlugin.sendTiming(null, null, 'ajax', new Date().getTime() - options.startTime, options.url, 'error')
+				//gaPlugin.sendTiming(null, null, 'ajax', new Date().getTime() - options.startTime, options.url, 'error')
 			}
 
 			customeError.apply(this, arguments)
@@ -108,34 +91,6 @@ define([
 
 		options.error = function(xhr, errorType, error) {
 			console.error('errorType: ' + errorType + ' ;error: ' + error)
-			console.error(gaPlugin.getXhrErrorMessage(xhr, options.url, method))
-
-			// options.retry 适配 salesforce 跨域请求机制
-			if (ENV.forcetkClient && (!ENV.forcetkClient.refreshToken || options.retry)) {
-				errorCbFn.apply(null, arguments)
-				return
-			}
-
-			if (xhr.status === 401) {
-				gaPlugin.sendEvent(null, null, 'oauth', '401', options.url, 0)
-
-				ENV.forcetkClient.refreshAccessToken(
-					function(oauthResponse) {
-						options.retry = true
-
-						// 适配 zepto 与 backbone
-						options.xhr = undefined
-
-						_BackboneSync(method, model, options)
-					},
-
-					function(xhr) {
-						errorCbFn.apply(null, [xhr, errorType, error])
-					}
-				)
-				return
-			}
-
 			errorCbFn.apply(null, arguments)
 		}
 	}
@@ -159,7 +114,7 @@ define([
 			}
 
 			if (options.startTime) {
-				gaPlugin.sendTiming(null, null, 'ajax', new Date().getTime() - options.startTime, options.url, new Date().getTime() - options.startTime < 1000 * 60 ? 'success' : 'error')
+				//gaPlugin.sendTiming(null, null, 'ajax', new Date().getTime() - options.startTime, options.url, new Date().getTime() - options.startTime < 1000 * 60 ? 'success' : 'error')
 			}
 		}
 	}

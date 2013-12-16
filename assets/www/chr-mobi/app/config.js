@@ -33,10 +33,6 @@ requirejs.config({
 			location: '../vendor/iscroll',
 			main: 'iscroll.js'
 		}, {
-			name: 'forcetk',
-			location: '../salesforce',
-			main:　'forcetk.mobilesdk.js'
-		}, {
 			name: 'subroute',
 			location: '../vendor/backbone.subroute',
 			main: 'backbone.subroute.js'
@@ -72,10 +68,6 @@ requirejs.config({
 		},
 		underscore: {
 			exports: '_'
-		},
-		forcetk: {
-			deps: ['zepto'],
-			exports: 'forcetk'
 		},
 		subroute: {
 			deps: ['backbone']

@@ -16,9 +16,8 @@ define([
     '../view/visit/service',
     '../view/common/blank',
     '../cache',
-    '../ga',
     '../../component/autoSave'
-], function(Backbone, Layout, Visit, VisitsList, SearchAccount, Accounts, VisitPartner, VisitsView, VisitAddView, VisitsCreateView, Header, HeaderView, SearchView, VisitBusinessTypes, ServiceView, BlankView, Cache, gaPlugin, autoSave) {
+], function(Backbone, Layout, Visit, VisitsList, SearchAccount, Accounts, VisitPartner, VisitsView, VisitAddView, VisitsCreateView, Header, HeaderView, SearchView, VisitBusinessTypes, ServiceView, BlankView, Cache, autoSave) {
     var Module = {}
     Module.Router = Backbone.SubRoute.extend({
         routes: {
@@ -32,7 +31,7 @@ define([
         },
 
         list: function(type) {
-            var startTime = gaPlugin.start()
+            //var startTime = gaPlugin.start()
 
             App.router.setCurrentSwipeIndex(3)
 
@@ -56,10 +55,6 @@ define([
                 collection: visitsList
             })
 
-            gaPlugin.sendView(function(data) {
-                console.log(data)
-            }, null, '/visits')
-
             visitsList.fetch(_.extend({
                 _cache: {
                     key: '/visits',
@@ -67,18 +62,18 @@ define([
                 },
 
                 success: function() {
-                    gaPlugin.end('/visits', startTime, 'success')
+                    //gaPlugin.end('/visits', startTime, 'success')
                 },
 
                 error: function() {
-                    gaPlugin.end('/visits', startTime, 'error')
+                    //gaPlugin.end('/visits', startTime, 'error')
                     alert('加载失败，请重试。')
                 }
             }))
         },
 
         create: function() {
-            gaPlugin.sendView(App.noop, null, '/visits/create')
+            //gaPlugin.sendView(App.noop, null, '/visits/create')
 
             // 设置滑动切换所需的当前tab索引
             // 可以移出去，监听 router 的变化
@@ -205,16 +200,12 @@ define([
         },
 
         searchShop: function(hasDefault, params) {
-            gaPlugin.sendView(function(data) {
-                console.log(data)
-            }, null, '/visits/search-shop')
-
-            var startTime = gaPlugin.start()
+            //var startTime = gaPlugin.start()
             var header = new Header()
             var headerView = new HeaderView({
                 model: header
             })
-            var startTime = gaPlugin.start()
+            //var startTime = gaPlugin.start()
 
             Layout.resetLayout('shop')
             Layout.setModuleContainerColor('#f2f2f2')
@@ -249,10 +240,10 @@ define([
                         })
                     }
                     searchView.render()
-                    gaPlugin.end('/searchShop', startTime, 'success')
+                    //gaPlugin.end('/searchShop', startTime, 'success')
                 },
                 error: function() {
-                    gaPlugin.end('/searchShop', startTime, 'error')
+                    //gaPlugin.end('/searchShop', startTime, 'error')
                 }
             })
         },
@@ -268,11 +259,7 @@ define([
         },
 
         searchSales: function(hasDefault, params) {
-            gaPlugin.sendView(function(data) {
-                console.log(data)
-            }, null, '/visits/search-sales')
-
-            var startTime = gaPlugin.start()
+            //var startTime = gaPlugin.start()
             var header = new Header()
             var headerView = new HeaderView({
                 model: header
@@ -312,10 +299,10 @@ define([
                         })
                     }
                     searchView.render()
-                    gaPlugin.end('/searchSales', startTime, 'success')
+                    //gaPlugin.end('/searchSales', startTime, 'success')
                 },
                 error: function() {
-                    gaPlugin.end('/searchSales', startTime, 'error')
+                    //gaPlugin.end('/searchSales', startTime, 'error')
                 }
             }))
         },

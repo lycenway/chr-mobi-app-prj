@@ -2,9 +2,8 @@ define([
 	'backbone',
 	'zepto',
 	'app',
-	'../../tpl-data-bind',
-	'../../ga'
-], function(Backbone, $, App, Tpl, gaPlugin) {
+	'../../tpl-data-bind'
+], function(Backbone, $, App, Tpl) {
 	return Backbone.View.extend({
 		el: $(document.body),
 
@@ -78,7 +77,7 @@ define([
 		},
 
 		show: function() {
-			gaPlugin.sendEvent(null, null, 'user', 'click', 'call-contact', 0)
+			//gaPlugin.sendEvent(null, null, 'user', 'click', 'call-contact', 0)
 			var self = this
 			App.maskView.show(function() {
 				self.hide()

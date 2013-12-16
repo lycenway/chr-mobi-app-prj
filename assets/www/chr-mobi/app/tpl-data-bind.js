@@ -1,4 +1,4 @@
-define(['underscore', 'ga'], function (_, gaPlugin) {
+define(['underscore'], function (_) {
     var _templates = {}
 
 	return {
@@ -32,15 +32,6 @@ define(['underscore', 'ga'], function (_, gaPlugin) {
                 + '.htm'
 
             $.get(tplUrl, function(html) {
-                gaPlugin.sendTiming(
-                    null,
-                    null,
-                    'template',
-                    new Date - startTime,
-                    tplName,
-                    new Date - startTime < 1000 * 60 ? 'success' : 'error'
-                )
-
                 // 存本地
                 localStorage.setItem(tplName, html)
                 // 存运行时
