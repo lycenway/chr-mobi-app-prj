@@ -1,0 +1,56 @@
+<% _.each(visits, function (item, key) { %>
+<div class="visit-today clearfix">
+	<dl>
+		<dt><h3>今日</h3></dt>
+		<dd><h3> <%= item.today %></h3></dd>
+	</dl>
+	<dl>
+		<dd><h3 class="<%= item.metric.visitNumberByDay == 0 ? 'red' : '' %>"> <%= item.metric.visitNumberByDay %> </h3><span class="small">次采集</span></dd>
+	</dl>
+</div>
+<ul class="visit-list">
+	<% _.each(item.visitList, function(detailItem, key) { %>
+	<li>
+		<div class="item-header clearfix">
+			<span class="visit-status"><%= detailItem.stage %></span>
+			<h3 class="ico-group"><%= detailItem.account.name %></h3>
+		</div>
+
+		<div class="line"></div>
+
+		<div class="item-body">
+			<dl class="clearfix">
+				<dt>里程：</dt>
+				<dd><%= detailItem.caseMile.kiloShow %></dd>
+			</dl>	
+			<dl class="clearfix">
+				<dt>病害部位：</dt>
+				<dd><%= detailItem.caseType %></dd>
+			</dl>
+			<dl class="clearfix">
+				<dt>病害概要：</dt>
+				<dd>
+				<% _.each(detailItem.businessType, function(typeItem, typeKey){ %>
+				    <% if(typeItem.selected) {%>
+					<span class="iconframe <%= typeItem.className %>"></span>
+					<% }%>
+				<% }) %>
+				</dd>
+			</dl>
+			<% if(detailItem.owner && item.isManager){ %>
+			<dl class="clearfix">
+				<dt>采集人：</dt>
+				<dd><%= detailItem.owner.name %></dd>
+			</dl>
+			<% } %>
+			<dl class="clearfix">
+				<dt>病害描述：</dt>
+				<% if(detailItem.description){ %>
+				<dd><%= detailItem.description %></dd>
+				<% } %>
+			</dl>
+		</div>
+	</li>
+	<% }) %>
+</ul>
+<% }) %>

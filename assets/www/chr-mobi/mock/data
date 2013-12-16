@@ -1,0 +1,23 @@
+{
+	"code": 200,
+	"msg": {
+		"contract": {
+			"rejected": 120,
+			"inApproval": 22221312,
+			"approved": 111232
+		},
+		"dealGroup": {
+			"rejected": 312321342,
+			"online": 4112312311,
+			"inProduction": 22213125
+		},
+		"performance": {
+			"teamAmount": 433320.1,
+			"salesAmount": 123,
+			"salesIncome": 234,
+			"onlineDealGroup": 22,
+			"onlineKABAccount": 33,
+			"newDealGroup": 32
+		}
+	}
+}

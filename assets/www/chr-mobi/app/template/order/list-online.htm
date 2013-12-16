@@ -1,0 +1,54 @@
+<% _.each(orders, function (item, key) { %>
+	<li class="online-order">
+		<h3>
+			<b class="product-title"><%= item.productTitle %></b>
+			<span class="product-amount"><%= item.amountMonth %></span>
+			<i class="arrow" style="-webkit-transform: rotate(225deg);"></i>
+		</h3>
+		<p class="product-description"><%= item.productDescription %></p>
+		<div class="product-detail clearfix" style="display: none;">
+			<div class="online-left">
+				<dl class="clearfix">
+					<dt>当月作业费用</dt>
+					<dd><%= item.amountMonth %></dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>年度费用</dt>
+					<dd><%= item.amountAll %></dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>当月维修量</dt>
+					<dd><%= item.receiptMonth %></dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>年度设备量</dt>
+					<dd><%= item.visit %></dd>
+				</dl>
+			</div>
+			<div class="online-right">
+				<dl class="clearfix">
+					<dt>当月预算</dt>
+					<dd><%= item.commissionMonth %></dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>年度预算</dt>
+					<dd><%= item.commissionAll %></dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>累计维修量</dt>
+					<dd><%= item.receiptAll %></dd>
+				</dl>
+
+				<!-- <dl class="clearfix">
+					<dt>退款数</dt>
+					<dd></dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>转换率</dt>
+					<dd></dd>
+				</dl> -->
+			</div>
+		</div>
+	</li>
+<% }) %>
+

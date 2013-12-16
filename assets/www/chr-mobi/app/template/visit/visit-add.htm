@@ -1,0 +1,8 @@
+<% _.each(visits, function (item, key) { %>
+<% if(!item.isManager){ %>
+<% if(item.metric.visitNumberByDay == 0){ %>
+<div class="visit-add-img"><img src="<%= baseUrl%>/app/asset/img/visit-add.png" /></div>
+<% } %>
+<div class="visit-add-ico">+</div>
+<% } %>
+<% }) %>

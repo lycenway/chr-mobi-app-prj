@@ -1,0 +1,48 @@
+{
+	"code": 200,
+	"msg": [
+		{
+			"id": 234142,
+			"serialNumber": "KTG0319123",
+			"productNumber": "ZZ 12344",
+			"productionStatus": "test production status",
+			"mainDealName": "99元 4人套餐",
+			"dealNumber": "BD 9320200",
+			"accountName": "河南拉面",
+			"approverName": "崔佶吉,张凤,翁腾蛟",
+			"approverTitle": "AE",
+			"approvalStatus": "审批中",
+			"approverMemo": "不知道什么原因 fuck不知道什么原因 fuck不知道什么原因 fuck不知道什么原因 fuck不知道什么原因 fuck",
+			"contacts": [
+				{
+					"name": "abcdefghijklmnopqrstuvw",
+					"mobilePhone": "13823823485"
+				},
+				{
+					"name": "张三疯张三疯张三疯",
+					"mobilePhone": "13823123485"
+				},
+				{
+					"name": "张三",
+					"mobilePhone": "13823123485"
+				},
+				{
+					"name": "张三",
+					"mobilePhone": "13823123485"
+				},
+				{
+					"name": "张三",
+					"mobilePhone": "13823123485"
+				},
+				{
+					"name": "张三",
+					"mobilePhone": "13823123485"
+				},
+				{
+					"name": "张三",
+					"mobilePhone": "13823123485"
+				}
+			]
+		}
+	]
+}

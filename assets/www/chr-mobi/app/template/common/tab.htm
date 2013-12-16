@@ -1,0 +1,9 @@
+<ol class="list-tab clearfix">
+	<% _.each(tabs, function (item) { %>
+	<li class="<%= item.type + ' '+ (item.active ? 'active' : '') + ' w-' + tabs.length %>">
+		 
+		<span class="<%= 'num ' + ((tabs.length == '2' && item.num != '0') ? 'red' : '')  +' ' + ((tabs.length == '3' && item.num == '0' && item.active ) ? 'gray' : '') %>"><%= item.num %></span>
+		<span class="status"><%= item.text %></span>
+	</li>
+	<% }) %>
+</ol>

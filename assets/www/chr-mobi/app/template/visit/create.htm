@@ -1,0 +1,75 @@
+<div class="visits-create">
+	<div class="parameter">
+		<dl class="shop-name-edit" data-type="shopName">
+			<dt class="required">线|段|起止</dt>
+			<dd>
+				<span class="array">&gt;</span>
+				<span class="shop-name" data-value="<%=visit.account.id %>">
+					<%= visit.account.name %>
+				</span>
+			</dd>
+		</dl>
+		<dl class="case-mile-edit" data-type="caseMile">
+			<dt class="required">里程</dt>
+			<dd>
+				<span class="case-mile" data-value="<%=visit.caseMile.num %>">
+					<%= visit.caseMile.kiloShow %></span>
+			</dd>
+		</dl>
+		<dl class="visit-casetype-edit" data-type="caseType">
+			<dt class="required">病害部位</dt>
+			<dd>
+				<span class="visitCaseType">
+				<% _.each(visit.caseType, function (item, key) { %>
+					<% if(item.selected) {%>
+					<%= item.name%>
+					<% }%>
+				<% }) %>
+				</span>
+			</dd>
+		</dl>
+		<dl class="visit-type-edit clearfix" data-type="visitType">
+			<dt class="required">病害概要</dt>
+			<dd>
+				<% _.each(visit.businessType, function (item, key) { %>
+				<span class="bigiconframe <%= item.className %> <%=item.selected ? 'selected' : 'not-selected'%>" data-value="<%= item.name%>"></span>
+				<% }) %>
+			</dd>
+		</dl>
+		<dl class="visit-status-edit" data-type="visitStatus">
+			<dt class="required">病害程度</dt>
+			<dd>
+				<span class="visitStatus">
+				<% _.each(visit.stage, function (item, key) { %>
+					<% if(item.selected) {%>
+					<%= item.name%>
+					<% }%>
+				<% }) %>
+				</span>
+			</dd>
+		</dl>
+		<dl data-type="visitTime">
+			<dt class="required">采集时间</dt>
+			<dd>
+				<span class="visit-date-edit"><%= visit.visitDate %></span>
+			</dd>
+		</dl>
+	</div>
+    <div class="select-caseimagespan caseimage-tools clearfix">
+        <div class="container">
+            <div class="img">
+                <span>用相机拍照片</span>
+            </div>
+        </div>
+        <div class="container visit-img-album-tap">
+            <div class="img">
+                <span>选取已有图片</span>
+            </div>
+        </div>
+		<img class="caseimage" src="data:image/jpeg;base64,<%= visit.casePicture%>"/>
+    </div>  	
+	<div class="subhead">病害描述</div>
+	<div class="textarea visit-description">
+		<textarea rows="5" autocomplete="off"><%= visit.description%></textarea>
+	</div>
+</div>

@@ -1,0 +1,40 @@
+{
+  "name": "crm-app",
+  "version": "0.0.5",
+  "description": "crm app",
+  "main": "Gruntfile.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "amd-doc": "~0.2.0",
+    "grunt": "~0.4.1",
+    "grunt-amd-doc": "~0.4.3",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-less": "~0.6.4",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-ftp-deploy": "~0.0.9",
+    "grunt-scp": "~0.1.5"
+  },
+  "devDependencies": {
+    "grunt-rsync": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt": "~0.4.1",
+    "grunt-contrib-connect": "~0.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@code.dianpingoa.com:f2e-ba/app-crm-contract-order.git"
+  },
+  "keywords": [
+    "crm",
+    "app"
+  ],
+  "author": "Kane",
+  "license": "BSD-2-Clause"
+}

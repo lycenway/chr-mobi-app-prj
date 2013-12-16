@@ -1,0 +1,58 @@
+{
+    "code": 200,
+    "msg": {
+        "isManager": false,
+        "metric": {
+            "visitNumberByWeek": 10,
+            "visitNumberByMonth": 100,
+            "visitNumberByDay": 3
+        },
+        "visitList": [{
+            "account": {
+                "name": "杭深线|宁波东|K319+958|K325+000",
+                "id": "1"
+            },
+            "caseMile": {
+                "num": "320.588",
+                "kiloShow": "K320+588"
+            },
+            "id": "2",
+            "stage": "介绍产品",
+            "caseType": "道床",
+            "description": "雨水淤积，道碴包裹泥浆，翻浆冒泥，溅水严重",
+            "visitDate": "2013-09-23",
+            "businessType": "道床板结;轨道板开裂",
+            "partner": {
+                "name": "周一二三",
+                "id": "2"
+            },
+            "owner": {
+                "name": "李璐璐",
+                "id": "3"
+            },
+            "marketingTools": "营销工具",
+            "visitIssue": ""
+        },{
+            "account": {
+                "name": "杭深线|乐清|K506+000|K565+000",
+                "id": "1"
+            },
+            "caseMile": {
+                "num": "558.588",
+                "kiloShow": "K558+588"
+            },
+            "id": "2",
+            "stage": "协商价格",
+            "caseType": "钢轨",
+            "description": "我来换个行啦啦啦我来换个行啦啦啦我来换个行啦啦啦我来换个行啦啦啦我来换个行啦啦啦我来换个行啦啦啦我来换个行啦啦啦我来换个行啦啦啦我来换个行啦啦啦我来换个行啦啦啦我来换个行啦啦啦我来换个行啦啦啦",
+            "visitDate": "2013-09-23",
+            "businessType": "轨头表面压陷;光带不良;轨腰伤损;轨头横向裂纹",
+            "owner": {
+                "name": "李璐璐",
+                "id": "3"
+            },
+            "marketingTools": "营销工具",
+            "visitIssue": ""
+        }]
+    }
+}

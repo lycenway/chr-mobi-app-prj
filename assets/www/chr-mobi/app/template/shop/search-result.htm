@@ -1,0 +1,11 @@
+<% if(accounts.length>0){ %>
+<ol class="history-search-list">
+	<% _.each(accounts, function(item, key) { %>
+	<li><span class="select-one" data-value="<%=item.id %>"><%=item.name%></span></li>
+	<% }) %>
+</ol>
+<% } else if(isSearched){ %>
+<p class="no-record-desc">无搜索历史</p>
+<% } else{ %>
+<p class="no-record-desc">无相关线|段|里程，请重新输入</p>
+<% } %>

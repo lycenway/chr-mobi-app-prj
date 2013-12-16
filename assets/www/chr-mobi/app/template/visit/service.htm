@@ -1,0 +1,15 @@
+<p class="service-title">请选择病害类型</p>
+<ol class="service-list clearfix">
+	<% _.each(services, function (item, index) { %>
+		<li data-typeid="<%= item.id %>" class="<%= item.selected ? 'active' : '' %>" ><%= item.name %></li>
+	<% }) %>
+</ol>
+<p class="service-title">按照严重程度排列</p>
+<div class="service-sort-container clearfix">
+	<div class="order-view"></div>
+	<ol class="order-list">
+		<% _.each(selectedItems, function (item, index) { %>
+			<li data-typeid="<%= item.id %>"><%= item.name %><i class="close"></i></li>
+		<% }) %>
+	</ol>
+</div>

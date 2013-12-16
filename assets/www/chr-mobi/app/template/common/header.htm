@@ -1,0 +1,5 @@
+<ol>
+	<% _.each(navs, function (item) { %>
+	<li class="<%= item.type + ' ' + (item.active ? 'active' : '') + ' ' + (item.isNew ? 'new' : '') %>"><a href="<%= item.url %>"><%= item.text %></a></li>
+	<% }) %>
+</ol>

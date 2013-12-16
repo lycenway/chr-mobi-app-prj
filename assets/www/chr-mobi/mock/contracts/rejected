@@ -1,0 +1,40 @@
+{
+	"code": 200,
+	"msg": [
+		{
+			"id": 234142,
+			"serialNumber": "KTG0319123",
+			"registerName": "河南拉面",
+			"contractType": 1,
+			"contractNumber": "00218420",
+			"approvalStatus": "被驳回",
+			"accountName": "河南拉面",
+			"approverName": "崔佶吉,张凤,翁腾蛟,姜如萍",
+			"approverTitle": "AE",
+			"approverMemo": "不知道什么原因 fuck不知道什么原因 fuck不知道什么原因 fuck不知道什么原因 fuck不知道什么原因 fuck",
+			"contacts": [
+				{
+					"name": "张三",
+					"mobilePhone": "13823123485"
+				}
+			]
+		}, {
+			"id": 23442,
+			"serialNumber": "KTG0319123",
+			"registerName": "河南拉面",
+			"contractType": 1,
+			"contractNumber": "00218420",
+			"approvalStatus": "被驳回",
+			"accountName": "河南拉面",
+			"approverName": "崔佶吉,张凤,翁腾蛟,姜如萍",
+			"approverTitle": "AE",
+			"approverMemo": "不知道什么原因 fuck不知道什么原因 fuck不知道什么原因 fuck不知道什么原因 fuck不知道什么原因 fuck",
+			"contacts": [
+				{
+					"name": "张三",
+					"mobilePhone": "13823123485"
+				}
+			]
+		}
+	]
+}

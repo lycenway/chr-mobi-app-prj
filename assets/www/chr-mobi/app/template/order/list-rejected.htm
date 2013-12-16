@@ -1,0 +1,43 @@
+<% _.each(orders, function (item, key) { %>
+<li>
+	<div class="item-header clearfix">
+		<span class="call-shop" item-index="<%= key %>">联系</span>
+		<h3 class="ico-group"><%= item.accountName %></h3>
+	</div>
+
+	<div class="line"></div>
+
+	<div class="item-body">
+		<dl class="rejector clearfix">
+			<dt>处理人：</dt>
+			<dd>
+				<% if (item.approverTitle != "") { %>
+					<%= item.approverTitle %>
+				<% } %>
+				<b><%= item.approverName %></b>
+			</dd>
+		</dl>
+
+		<% if (item.approverMemo != "") { %>
+			<div class="reject-reason"><%= item.approverMemo %></div>
+		<% } %>
+		
+		<dl class="clearfix">
+			<dt>设备特征：</dt>
+			<dd><%= item.mainDealName %></dd>
+		</dl>
+		<dl class="clearfix">
+			<dt>设备号：</dt>
+			<dd><%= item.dealNumber %></dd>
+		</dl>
+		<dl class="clearfix">
+			<dt>作业号：</dt>
+			<dd><%= item.productNumber %></dd>
+		</dl>
+		<dl class="clearfix">
+			<dt>所属线|段|里程：</dt>
+			<dd><%= item.serialNumber %></dd>
+		</dl>
+	</div>
+</li>
+<% }) %>

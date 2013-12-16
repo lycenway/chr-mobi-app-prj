@@ -1,0 +1,49 @@
+{
+	"code": 200,
+	"msg": [
+	   {
+	      "serialNumber":"TG0080243",
+	      "registerName":"上海燕羽餐饮管理有限公司",
+	      "k2InstId":"77380",
+	      "id":"80090000000FaUTAA0",
+	      "contractType":"团购",
+	      "contractNumber":"00111071",
+	      "contacts":[
+	         {
+	            "title":null,
+	            "name":"马蕾",
+	            "mobilePhone":"13801915559",
+	            "id":"a0F90000005xiPREAY"
+	         }
+	      ],
+	      "approverTitle":"AE",
+	      "approverName":"夏圣轶,季燕,杜海欧,黄晓菁,沈逢美,刘孝贞,聂耘鑫,单东颖,凌永香,王艳雯,陶洁(产假中),王彬彬,张奇聪,张文,孙鹂,贝怡,徐芳.sh,杨洁.sh,鲍琼,许文娟（离职）",
+	      "approverMemo":null,
+	      "approverAction":"等待下一级审批",
+	      "approvalStatus":"审批中",
+	      "accountName":"幸福131(古羊路店)"
+	   },
+	   {
+	      "serialNumber":"TG0039961",
+	      "registerName":"上海市黄浦区艺廊小吃店",
+	      "k2InstId":null,
+	      "id":"80090000000EZV5AAO",
+	      "contractType":"团购",
+	      "contractNumber":"00015875",
+	      "contacts":[
+	         {
+	            "title":"老板",
+	            "name":"陈先生",
+	            "mobilePhone":"13661593029",
+	            "id":"a0F90000004Vy63EAC"
+	         }
+	      ],
+	      "approverTitle":null,
+	      "approverName":null,
+	      "approverMemo":null,
+	      "approverAction":null,
+	      "approvalStatus":"审批中",
+	      "accountName":"彩石矶石锅料理"
+	   }
+	]
+}

@@ -1,0 +1,29 @@
+{
+	"code": 200,
+	"msg": {
+		"user": {
+			"UserRole": "宁波团购餐饮1-1组销售代表",
+			"LoginId": "-14683",
+			"EmployeeNumber": "0001564",
+			"City": "宁波"
+		},
+		"contract": {
+			"rejected": 3,
+			"inApproval": 2,
+			"approved": 125
+		},
+		"dealGroup": {
+			"rejected": 2,
+			"online": 93,
+			"inProduction": 0
+		},
+		"performance": {
+			"teamAmount": 30000000,
+			"salesAmount": 322033,
+			"salesIncome": 6821359857,
+			"onlineDealGroup": 20,
+			"onlineKABAccount": 33,
+			"newDealGroup": 32
+		}
+	}
+}

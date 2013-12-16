@@ -1,0 +1,17 @@
+<div class="contact-container">
+	<h4>联系人</h4>
+	<div class="contact-scroller">
+		<ul class="contact-list">
+			<% _.each(contacts, function (item, index) { %>
+			<li class="clearfix">
+				<a href="tel: <%= item.mobilePhone %>">
+					<span class="name"><%= item.name %></span>
+					<span class="tel"><%= item.mobilePhone %></span>
+				</a>
+			</li>
+			<% }) %>
+		</ul>
+	</div>
+	<span class="close">取消</span>
+</div>
+
