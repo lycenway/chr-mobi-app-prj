@@ -6,7 +6,7 @@ define([
 	'./create-select-status',
 	'./create-select-casetype',
 	'./create-select-date',
-	'./create-select-casemile'
+	'./create-select-casemile',
 	'app/../../component/autoSave',
 	'../../loading',
 	'../../collection/selected-account',
